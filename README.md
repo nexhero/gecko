@@ -1,16 +1,17 @@
 
 # Table of Contents
 
-1.  [Features](#org1fa5e31)
-2.  [Installation](#org12ea3c7)
-3.  [Notes](#org6959fc1)
-4.  [Commands](#org2b469cc)
+1.  [Features](#orgab67acc)
+2.  [Installation](#org0559be7)
+3.  [Notes](#orgee68bac)
+4.  [Commands](#orgefedd2b)
 
 ![img](./assets/gecko_image.jpg)
+
 A Fish shell command-line tool for managing Python virtual environments. It allows creating, activating, removing, and listing environments, with support for specifying Python versions via pyenv.
 
 
-<a id="org1fa5e31"></a>
+<a id="orgab67acc"></a>
 
 # Features
 
@@ -21,7 +22,7 @@ A Fish shell command-line tool for managing Python virtual environments. It allo
 -   Easy to use with command-line flags
 
 
-<a id="org12ea3c7"></a>
+<a id="org0559be7"></a>
 
 # Installation
 
@@ -30,7 +31,7 @@ A Fish shell command-line tool for managing Python virtual environments. It allo
     makepkg -si
 
 
-<a id="org6959fc1"></a>
+<a id="orgee68bac"></a>
 
 # Notes
 
@@ -39,7 +40,7 @@ A Fish shell command-line tool for managing Python virtual environments. It allo
 -   Use \`deactivate\` to exit from an active environment
 
 
-<a id="org2b469cc"></a>
+<a id="orgefedd2b"></a>
 
 # Commands
 

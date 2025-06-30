@@ -1,7 +1,10 @@
 #+title: gecko - Fish Shell Virtual Environment Manager
 #+ATTR_HTML: :align right
 #+ATTR_ORG: :align center
+#+ATTR_HTML: :width 100px
+
 [[./assets/gecko_image.jpg]]
+
 A Fish shell command-line tool for managing Python virtual environments. It allows creating, activating, removing, and listing environments, with support for specifying Python versions via pyenv.
 
 * Features

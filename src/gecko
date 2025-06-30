@@ -33,13 +33,9 @@ function gecko
 
     function listEnv
         set envList (ls $env_path)
-        set_color -o -u white
-        echo -e "\nCurrent Envs\n"
-        set_color normal
         for env in $envList
             echo $env
         end
-        echo -e "\n"
     end
 
     function create
@@ -124,7 +120,7 @@ function gecko
     #############
     if set -ql _flag_h
         _help
-        return 1
+        return 0
     end
 
     ####################
@@ -136,7 +132,7 @@ function gecko
             set python_ver $_flag_p
         end
         create $_flag_c $python_ver
-        return 1
+        return 0
     end
 
     #################
@@ -144,7 +140,7 @@ function gecko
     #################
     if set -ql _flag_a
         activate $_flag_a
-        return 1
+        return 0
     end
 
     ##############
@@ -152,12 +148,12 @@ function gecko
     ##############
     if set -ql _flag_r
         remove $_flag_r
-        return 1
+        return 0
     end
 
     if set -ql _flag_l
         listEnv
-        return 1
+        return 0
     end
 end
 
