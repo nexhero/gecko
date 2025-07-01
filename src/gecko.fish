@@ -33,9 +33,11 @@ function gecko
 
     function listEnv
         set envList (ls $env_path)
+
         for env in $envList
             echo $env
         end
+
     end
 
     function create
@@ -46,7 +48,7 @@ function gecko
 
         if envExist $name
             errorMsg "This env already exist"
-            return 0
+            return 1
         end
 
         if test -n "$python_version"
@@ -75,8 +77,10 @@ function gecko
             end
             rm -rf "$env_path/$name"
             successMsg "$name has been removed"
+            return 0
         else
             errorMsg "Env do not exist"
+            return 1
         end
     end
 
@@ -86,6 +90,7 @@ function gecko
             source "$env_path/$name/bin/activate.fish"
         else
             errorMsg "Env do not exist"
+            return 1
         end
     end
 
@@ -120,7 +125,6 @@ function gecko
     #############
     if set -ql _flag_h
         _help
-        return 0
     end
 
     ####################
@@ -132,7 +136,7 @@ function gecko
             set python_ver $_flag_p
         end
         create $_flag_c $python_ver
-        return 0
+
     end
 
     #################
@@ -140,7 +144,7 @@ function gecko
     #################
     if set -ql _flag_a
         activate $_flag_a
-        return 0
+
     end
 
     ##############
@@ -148,13 +152,10 @@ function gecko
     ##############
     if set -ql _flag_r
         remove $_flag_r
-        return 0
     end
 
     if set -ql _flag_l
         listEnv
-        return 0
+
     end
 end
-
-gecko $argv

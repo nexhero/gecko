@@ -9,5 +9,5 @@ depends=('fish' 'pyenv')
 source=()
 
 package() {
-  install -Dm755 "$srcdir/gecko" "$pkgdir/usr/bin/gecko"
+  install -Dm755 "$srcdir/gecko.fish" "$pkgdir/usr/share/fish/functions/gecko.fish"
 }
